@@ -7,6 +7,7 @@
     --color-secondary: #6E7E85;
     --color-accent: #007AFF;
     --color-background: #000000;
+    --color-background2: #595959;
 
 }
 
@@ -58,7 +59,7 @@
 
 @utility bg-primary-radial-nav {
 
-  @apply bg-radial-[at_50%_100%] from-primary to-yellow-100/5 to-55% ;
+  @apply bg-radial-[at_50%_100%] from-primary to-gray-100 to-55% ;
 }
 
 @utility form-entry {
@@ -69,5 +70,10 @@
 
 @utility form-submit-btn {
 
-  @apply text-2xl border-2 border-black bg-accent text-white rounded-3xl hover:bg-blue-800 transition duration-200;
+  @apply text-2xl border-2 border-black bg-accent text-white rounded-3xl transition-all duration-200 hover:bg-blue-800;
+}
+
+@utility link-button {
+
+  @apply bg-radial-[at_100%_100%] from-gray-200 to-white to-75% border-2 border-gray-700 sm:rounded-lg lg:rounded-xl px-2 lg:py-2 sm:font-medium lg:font-normal sm:text-[15px] lg:text-lg sm:py-1 text-center w-full;
 }
