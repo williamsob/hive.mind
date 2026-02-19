@@ -27,13 +27,49 @@ li a {
     height: 150px;
     background-color: white;
     border: 3px solid #9c9c9c;
+    box-shadow: inset 0 -20px 10px -10px rgba(255,165,0,1);
+    display: flex;
+    align-items: center;
 }
 
 #navbar ul {
     font-family: "Golos Text", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
 }
 
 #navbar li {
     border: 2px solid #9c9c9c;
     width: auto;
+    float: none;
+    list-style: none;
+    margin: 0 10px;
+    border: 2px solid #9c9c9c;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#navbar li.search-container {
+    border: none;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.search-container { 
+    margin-right: auto;
+}
+
+.search-container input[type="text"] {
+    /* float: left; */
+    padding: 5px;
+    /* margin: 10px; */
+    /* background: white; */
+    border: 2px solid #9c9c9c;
+    border-radius: 20px;
+    width: 250px;
+    font-size: 12px;
+    height: 15px;
 }
