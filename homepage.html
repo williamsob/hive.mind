@@ -7,7 +7,7 @@
     <link href="output.css" rel="stylesheet">
 </head>
 
-<body class="bg-background2 min-h-screen flex flex-col space-y-5 lg:space-y-12">
+<body class="bg-background2 min-h-screen flex flex-col space-y-5 lg:space-y-12 ">
     <!-- need to re-arrange the radial. use bg-...-nav after recompiling-->
     <nav class="bg-primary-radial-nav border-b-2 h-auto lg:h-20 border-gray-500 py-3 flex flex-row space-x-5 lg:space-x-10 items-center">
         <svg width="70" height="70" viewBox="0 0 216 216" fill="none" class="ml-2" xmlns="http://www.w3.org/2000/svg">
@@ -35,61 +35,141 @@
     </nav>
 
     <div class="bg-red-300 w-full h-full">
-    <div class="flex flex-row py-3 bg-white w-full h-auto border-t-2 border-b-2 border-black items-center space-x-5">
-        <div class="flex flex-row items-center ml-5 space-x-5 lg:space-x-10 w-fit ">
-            <div class="bg-gray-400 w-20 h-20 lg:w-25 lg:h-25 rounded-full border-2 border-black flex items-center justify-center flex-shrink-0 text-white font-semibold">
-                pfp
-            </div>
-
-            <div class="flex flex-col w-[150px] lg:w-[225px]">
-                <div class="font-bold lg:font-semibold text-xl md:text-3xl">
-                    Welcome back,
+        <div class="flex flex-row py-3 bg-white w-full h-auto border-t-2 border-b-2 border-black items-center space-x-5">
+            <div class="flex flex-row items-center ml-5 space-x-5 lg:space-x-10 w-fit ">
+                <div class="pfp-circle text-white font-semibold">
+                    pfp
                 </div>
 
-                <div class="text-xl md:text-3xl">
-                    [your name]
+                <div class="flex flex-col w-[150px] lg:w-[225px]">
+                    <div class="font-bold lg:font-semibold text-xl md:text-3xl">
+                        Welcome back,
+                    </div>
+
+                    <div class="text-xl md:text-3xl">
+                        [your name]
+                    </div>
                 </div>
+
             </div>
 
-        </div>
+            
+            <div class="flex flex-row items-center space-x-5 lg:space-x-20 w-full justify-end mr-2 lg:mr-3">
+                <div class="flex flex-row">
+                    <svg width="50" height="40" class="w-10" viewBox="0 0 20 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.49213 0C9.49924 11.3281 -0.0650568 11.0938 0.000333862 22.5C0.0539276 31.8367 8.20151 35 10.0115 35C11.8214 35 18.9084 32.9688 19.928 22.5C20.7587 13.97 14.2635 5 7.49213 0ZM10.0115 34.375C10.0115 34.375 6.83174 31.5769 6.83174 28.125C6.83174 24.6732 10.0001 21.875 10.0001 21.875C10.0001 21.875 13.151 24.6732 13.151 28.125C13.151 31.5769 10.0115 34.375 10.0115 34.375Z" fill="black"/>
+                    </svg>
+                    
+                    <div class="text-3xl lg:text-4xl flex flex-col justify-center align-center">
+                        x
+                    </div>
+                </div>
 
+                <div class="flex flex-row items-center space-x-3 text-lg text-green-700 font-bold bg-green-300 py-1 px-2 lg:py-2 lg:px-4 rounded-full border-[5px]">
+                    <svg width="35" height="35" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.94 35.94C18.3141 35.94 21.86 32.3941 21.86 28.02C21.86 23.6459 18.3141 20.1 13.94 20.1C9.5659 20.1 6.02 23.6459 6.02 28.02C6.02 32.3941 9.5659 35.94 13.94 35.94ZM13.94 35.94C5.14 35.94 2.5 42.98 2.5 46.5M13.94 35.94C22.74 35.94 25.38 42.98 25.38 46.5M35.06 18.34C39.4341 18.34 42.98 14.7941 42.98 10.42C42.98 6.0459 39.4341 2.5 35.06 2.5C30.6859 2.5 27.14 6.0459 27.14 10.42C27.14 14.7941 30.6859 18.34 35.06 18.34ZM35.06 18.34C26.26 18.34 23.62 25.38 23.62 28.9M35.06 18.34C43.86 18.34 46.5 25.38 46.5 28.9" stroke="#177B40" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+
+                    <div>
+                        y/z Online
+                    </div>
+                </div>
+
+                <div class="flex flex-col w-auto space-y-1">
+                    <div class="h-fit text-xl font-semibold">
+                        Next Group Meeting:
+                    </div>
+
+                    <div class="text-xl h-fit font-medium bg-radial-[at_50%_100%] to-gray-300 from-white-200 border-1 w-fit px-1">
+                        dd mm yyyy
+                    </div>
+                </div>
+
+            </div>
         
-        <div class="flex flex-row items-center space-x-5 lg:space-x-2s0 w-full justify-end mr-2 lg:mr-3">
-            <div class="flex flex-row">
-                <svg width="50" height="40" class="w-10" viewBox="0 0 20 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.49213 0C9.49924 11.3281 -0.0650568 11.0938 0.000333862 22.5C0.0539276 31.8367 8.20151 35 10.0115 35C11.8214 35 18.9084 32.9688 19.928 22.5C20.7587 13.97 14.2635 5 7.49213 0ZM10.0115 34.375C10.0115 34.375 6.83174 31.5769 6.83174 28.125C6.83174 24.6732 10.0001 21.875 10.0001 21.875C10.0001 21.875 13.151 24.6732 13.151 28.125C13.151 31.5769 10.0115 34.375 10.0115 34.375Z" fill="black"/>
-                </svg>
+            
+        </div>
+    
+
+        <div class="h-auto w-full bg-green-500">
+
+            <!-- Study Group Tab -->
+            <div class="flex flex-col items-center h-auto w-85 lg:w-105 mt-3 ml-1 lg:ml-3 bg-secondary2">
+                <h5 class="w-full h-auto py-3 border-3 text-center">
+                    Your Study Group:
+                </h5>
                 
-                <div class="text-3xl lg:text-4xl flex flex-col justify-center align-center">
-                    x
+                <!-- team mate profile section -->
+                <div class="flex flex-col space-y-5 pt-2 pb-2 border-x-2 border-y-2 w-full items-center">
+
+                    <!--team mate profile 1 -->
+                    <div class="tm-profile-container">
+                        <div class="tm-pfp-container">
+
+                        </div>
+
+                        <div class="flex flex-col space-y-2">
+                            <label class="tm-profile-label">
+                                First name Second name
+                            </label>
+
+                            <label class="tm-profile-label font-medium">
+                                Group name
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="tm-profile-container">
+                        <div class="tm-pfp-container">
+
+                        </div>
+
+                        <div class="flex flex-col space-y-2">
+                            <label class="tm-profile-label">
+                                First name Second name
+                            </label>
+
+                            <label class="tm-profile-label font-medium">
+                                Group name
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="tm-profile-container">
+                        <div class="tm-pfp-container">
+
+                        </div>
+
+                        <div class="flex flex-col space-y-2">
+                            <label class="tm-profile-label">
+                                First name Second name
+                            </label>
+
+                            <label class="tm-profile-label font-medium">
+                                Group name
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="tm-profile-container">
+                        <div class="tm-pfp-container">
+
+                        </div>
+
+                        <div class="flex flex-col space-y-2">
+                            <label class="tm-profile-label">
+                                First name Second name
+                            </label>
+
+                            <label class="tm-profile-label font-medium">
+                                Group name
+                            </label>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="flex flex-row items-center space-x-3 text-lg text-green-700 font-bold bg-green-300 py-1 px-2 lg:py-2 lg:px-4 rounded-full border-[5px]">
-                <svg width="35" height="35" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.94 35.94C18.3141 35.94 21.86 32.3941 21.86 28.02C21.86 23.6459 18.3141 20.1 13.94 20.1C9.5659 20.1 6.02 23.6459 6.02 28.02C6.02 32.3941 9.5659 35.94 13.94 35.94ZM13.94 35.94C5.14 35.94 2.5 42.98 2.5 46.5M13.94 35.94C22.74 35.94 25.38 42.98 25.38 46.5M35.06 18.34C39.4341 18.34 42.98 14.7941 42.98 10.42C42.98 6.0459 39.4341 2.5 35.06 2.5C30.6859 2.5 27.14 6.0459 27.14 10.42C27.14 14.7941 30.6859 18.34 35.06 18.34ZM35.06 18.34C26.26 18.34 23.62 25.38 23.62 28.9M35.06 18.34C43.86 18.34 46.5 25.38 46.5 28.9" stroke="#177B40" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-
-
-                <div>
-                    y/z Online
-                </div>
-            </div>
-
-            <div class="flex flex-col w-auto space-y-1">
-                <div class="h-fit text-xl font-semibold">
-                    Next Group Meeting:
-                </div>
-
-                <div class="text-xl h-fit font-medium bg-radial-[at_50%_100%] to-gray-300 from-white-200 border-1 w-fit px-1">
-                    dd mm yyyy
-                </div>
-            </div>
-
         </div>
-
-        
-    </div>
+        </div>
 
     </div>
 </body>

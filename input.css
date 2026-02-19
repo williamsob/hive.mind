@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 @theme {
     --font-golos: 'Golos Text', sans-serif;
+    --font-montserrat: 'Montserrat', sans-serif;
     --color-primary: #DEA54B;
     --color-secondary: #6E7E85;
+    --color-secondary2: #FFEDCA;
     --color-accent: #007AFF;
     --color-background: #000000;
     --color-background2: #595959;
-
+    --color-pfp-placeholder: var(--color-gray-400);
 }
 
 @utility flex-center {
@@ -49,31 +52,50 @@
   h6 {
     @apply text-xl font-semibold;
   }
+
+  body::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  body::-webkit-scrollbar-track {
+    @apply bg-radial-[at_50%_50%];
+  }
 }
 
 
-@utility bg-primary-radial {
 
+@utility bg-primary-radial {
   @apply bg-radial-[at_100%_100%] lg:bg-radial-[at_50%_100%] from-primary to-white to-60%  ;
 }
 
 @utility bg-primary-radial-nav {
-
   @apply bg-radial-[at_50%_100%] from-primary to-gray-100 to-55% ;
 }
 
 @utility form-entry {
-
   @apply font-golos border-2 border-gray-500 rounded-3xl px-3 focus:outline-none focus:ring-2 focus:ring-blue-500;
-  
 }
 
 @utility form-submit-btn {
-
   @apply text-2xl border-2 border-black bg-accent text-white rounded-3xl transition-all duration-200 hover:bg-blue-800;
 }
 
 @utility link-button {
-
   @apply bg-radial-[at_100%_100%] from-gray-200 to-white to-75% border-2 border-gray-700 sm:rounded-lg lg:rounded-xl px-2 lg:py-2 sm:font-medium lg:font-normal sm:text-[15px] lg:text-lg sm:py-1 text-center w-full;
+}
+
+@utility pfp-circle {
+  @apply bg-pfp-placeholder w-20 h-20 lg:w-25 lg:h-25 rounded-full border-2 border-black flex items-center justify-center;
+}
+
+@utility tm-profile-label {
+  @apply w-fit border-1 font-montserrat lg:text-xl px-1 lg:px-1 lg:py-1;
+}
+
+@utility tm-profile-container {
+  @apply flex flex-row items-center sm:border-2 w-fit space-x-5 py-2 px-1 bg-white;
+}
+
+@utility tm-pfp-container {
+  @apply pfp-circle w-15 h-15 lg:w-20 lg:h-20;
 }
