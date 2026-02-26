@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap');
 
 body {
-    background-color: white;
+    background-color: #b9b9b9;
     font-family: "Golos Text", sans-serif;
 }
 
@@ -72,4 +72,58 @@ li a {
     width: 250px;
     font-size: 12px;
     height: 15px;
+}
+
+#tasks {
+    display: inline-block;
+    width: 11%;
+    height: 40px;
+    border: 2px solid #9c9c9c;
+    background-color: #ffedca;
+    margin-left: 25px;
+    margin-top: 50px;
+    align-content: center;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#task_description {
+    display: inline-block;
+    width: 60%;
+    height: 40px;
+    border: 2px solid #9c9c9c;
+    background-color: #ffedca;
+    margin-left: 25px;
+    margin-top: 50px;
+    align-content: center;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.main {
+    background-color: white;
+    border-color: 2px solid #9c9c9c;
+    height: 500px;
+    margin-left: 25px;
+    margin-right: 200px;
+}
+
+table {
+    border: 2px solid #9c9c9c;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0px;
+}
+
+td,th {
+    border: 2px solid #9c9c9c;
+    text-align: left;
+    padding: 8px;
+}
+
+td:first-child {
+    background-color: #FFF6E5;
+    width: 15%;
 }
