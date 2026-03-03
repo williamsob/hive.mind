@@ -102,12 +102,19 @@ li a {
     border-top-right-radius: 10px;
 }
 
+.wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+
 .main {
     background-color: white;
     border-color: 2px solid #9c9c9c;
     height: 500px;
+    width: 1300px;
     margin-left: 25px;
-    margin-right: 200px;
+    margin-right: 5px;
 }
 
 table {
@@ -126,4 +133,16 @@ td,th {
 td:first-child {
     background-color: #FFF6E5;
     width: 15%;
+}
+
+#deletetask {
+    background-color: #ff0000;
+    color: black;
+    padding: 8px;
+}
+
+#createtask {
+    background-color: #007aff;
+    color: black;
+    padding: 8px;
 }
