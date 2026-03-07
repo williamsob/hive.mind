@@ -91,12 +91,10 @@
     border-left: 1px solid black;
   }
 
-
   #study-group-container::-webkit-scrollbar-thumb{
     @apply bg-primary border;
   }
 }
-
 
 
 @utility bg-primary-radial {
@@ -107,16 +105,20 @@
   @apply bg-radial-[at_50%_100%] from-primary to-gray-100 to-55% ;
 }
 
-@utility form-entry {
-  @apply font-golos border-2 border-gray-500 rounded-3xl px-3 focus:outline-none focus:ring-2 focus:ring-blue-500;
+@utility form-input-basic {
+  @apply font-golos border-2 border-gray-500 rounded-3xl px-3 focus:outline-none focus:ring-2 focus:ring-blue-500 w-4/5 h-10;
 }
 
 @utility form-submit-btn {
   @apply text-2xl border-2 border-black bg-accent text-white rounded-3xl transition-all duration-200 hover:bg-blue-800;
 }
 
-@utility link-button {
-  @apply bg-radial-[at_100%_100%] from-gray-200 to-white to-75% border-2 border-gray-700 sm:rounded-lg lg:rounded-xl px-2 lg:py-2 sm:font-medium lg:font-normal sm:text-[15px] lg:text-lg sm:py-1 text-center w-full;
+@utility form-input-error {
+  @apply border-red-600 bg-red-100/60 focus:ring-red-400;
+}
+
+@utility nav-link-button {
+  @apply bg-radial-[at_100%_100%] from-gray-200 to-white to-75% border-2 border-gray-700 sm:rounded-lg lg:rounded-xl px-2 lg:py-2 sm:font-medium lg:font-normal sm:text-[15px] lg:text-lg sm:py-1 text-center w-full hover:cursor-pointer;
 }
 
 @utility pfp-circle {
@@ -128,11 +130,15 @@
 }
 
 @utility tm-profile-container {
-  @apply flex flex-row items-center sm:border-2 w-fit space-x-5 sm:py-2 sm:px-1 p-0 bg-white;
+  @apply flex flex-row items-center sm:border-2 w-fit space-x-5 sm:py-2 sm:px-1 p-0 bg-white overflow-x-hidden text-ellipsis;
 }
 
 @utility tm-pfp-container {
   @apply pfp-circle w-15 h-15 lg:w-20 lg:h-20;
+}
+
+@utility tm-label-container {
+  @apply flex flex-col space-y-2 w-56 lg:w-72;
 }
 
 @utility card {
@@ -152,7 +158,7 @@
 }
 
 @utility home-task {
-  @apply bg-white flex flex-row items-center rounded-4xl border-2 pl-4 py-1 space-x-25 lg:space-x-50; 
+  @apply bg-white flex flex-row items-center rounded-4xl border-2 pl-4 py-1 space-x-10 lg:space-x-50; 
 }
 
 @utility home-task-label-container {
@@ -160,9 +166,13 @@
 }
 
 @utility home-task-label {
-  @apply font-medium text-nowrap ;
+  @apply font-medium text-nowrap w-60 lg:w-100 overflow-x-hidden text-ellipsis;
 }
 
 @utility home-task-btns {
   @apply h-fit w-10;
+}
+
+@utility home-task-btn-svg {
+  @apply rounded-full w-10 hover:border-4 mr-2 border-green-800 hover:cursor-pointer;
 }

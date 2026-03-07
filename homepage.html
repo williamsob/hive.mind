@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hive.Mind</title>
     <link href="output.css" rel="stylesheet">
-    <script src="homepageJS.js" async></script>
+    <script> 
+        if (sessionStorage.length <= 1){
+            window.location.href = "/login.html";
+        }
+    </script>
+    <script src="homepageGroup.js" type="module"></script>
+    <script src="homepageTasks.js" type="module"></script>
 </head>
 
 <body class="bg-background2 min-h-screen flex flex-col space-y-5 lg:space-y-12 ">
@@ -19,15 +25,15 @@
 
         <div class="flex-row flex w-full h-auto lg:h-14 items-center ">
             <div class=" w-full flex-center h-fit">  
-                <input type="text" placeholder="Search for friends by email or username"
+                <input id="searchBar" type="text" placeholder="Search for friends by email or username"
                 class="w-md lg:w-xl py-2 bg-white border-2 text-lg border-gray-750 rounded-4xl pl-2">
             </div>
             
             <div class="flex-col flex items-end">
                 <div class="flex flex-col lg:flex-row items-end gap-y-0 lg:space-x-5 sm:gap-y-1 sm:w-[150px] lg:w-xl h-fit mr-5">
-                    <a class="link-button">Study Group Chat</a>
-                    <a class="link-button">Pomodoro</a>
-                    <a class="link-button">Group Calendar</a>
+                    <a class="nav-link-button">Study Group Chat</a>
+                    <a class="nav-link-button">Pomodoro</a>
+                    <a class="nav-link-button">Group Calendar</a>
                 </div>
             </div>
 
@@ -102,11 +108,11 @@
                         Your Study Group:
                     </h5>
                     
-                    <!-- team mate profile section -->
+                    <!-- team mate profile section --><!--team mate profile 1 -->
                     <div id="study-group-container" class="flex flex-col space-y-5 pt-1 pb-2 border-x-2 border-y-2 w-full items-center h-[24.5rem] lg:h-96 overflow-y-scroll">
 
-                        <!--team mate profile 1 -->
-                        <div class="tm-profile-container">
+                        
+                        <!-- <div class="tm-profile-container">
                             <div class="tm-pfp-container">
 
                             </div>
@@ -168,7 +174,7 @@
                                     Group name
                                 </label>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -236,14 +242,14 @@
                 
                     <div id="task-container-with-scroll" class="flex flex-col items-center py-2 w-full space-y-2 overflow-y-scroll ">
                     <!-- tasks -->
-                        <div class="home-task-border">
+                        <!-- <div class="home-task-border">
 
                             
                             <div class="home-task">
                             
                                 <div class="home-task-label-container">
                                     <label class="home-task-label">
-                                        Task name: Task description
+                                        Task name
                                     </label>
 
                                     <label class="home-task-label">
@@ -360,9 +366,9 @@
                                     </svg>
                                 </div>
 
-                            </div>
+                            </div> 
 
-                        </div>
+                        </div> -->
                     
                     </div>
                 </div>
