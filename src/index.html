@@ -7,58 +7,48 @@
   <link rel="stylesheet" href="main.css">
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body style="margin: 0; padding: 0; background-image: url('data:image/svg+xml;utf8,<svg viewBox=\'0 0 1920 1080\' xmlns=\'http://www.w3.org/2000/svg\' preserveAspectRatio=\'none\'><rect x=\'0\' y=\'0\' height=\'100%\' width=\'100%\' fill=\'url(%23grad)\' opacity=\'1\'/><defs><radialGradient id=\'grad\' gradientUnits=\'userSpaceOnUse\' cx=\'0\' cy=\'0\' r=\'10\' gradientTransform=\'matrix(0.0000037618 36.2 -119.49 0.000012417 960 1080)\'><stop stop-color=\'rgba(222,165,75,1)\' offset=\'0\'/><stop stop-color=\'rgba(230,188,120,1)\' offset=\'0.25\'/><stop stop-color=\'rgba(239,210,165,1)\' offset=\'0.5\'/><stop stop-color=\'rgba(247,233,210,1)\' offset=\'0.75\'/><stop stop-color=\'rgba(255,255,255,1)\' offset=\'1\'/></radialGradient></defs></svg>'); background-size: cover; background-attachment: fixed; min-height: 100vh;">
-  <!-- Header -->
-  <div style="display: flex; align-items: center; justify-content: space-between; padding: 35px 33px; width: 100%; box-sizing: border-box;" data-name="Header" data-node-id="365:118">
-    <div style="display: flex; gap: 29px; align-items: center;" data-name="logo/wordmark lockup" data-node-id="176:114">
-      <div style="width: 66px; height: 66px; flex-shrink: 0;" data-name="Frame" data-node-id="176:115">
-        <img alt="hive.mind logo" style="width: 100%; height: 100%; display: block;" src="resources/logo.svg" />
+<body class="page">
+  <header class="site-header" data-name="Header" data-node-id="365:118">
+    <div class="logo-lockup" data-name="logo/wordmark lockup" data-node-id="176:114">
+      <div class="logo-box" data-name="Frame" data-node-id="176:115">
+        <img alt="hive.mind logo" src="../resources/logo.svg" />
       </div>
-      <div style="font-family: Golos Text, sans-serif; font-weight: 600; font-size: 36px; color: black; letter-spacing: -1.08px; white-space: nowrap; display: flex; align-items: center;" data-node-id="176:117">
-        <p style="margin: 0;">hive.mind</p>
-      </div>
+      <p class="wordmark" data-node-id="176:117">hive.mind</p>
     </div>
-    <div style="display: flex; gap: 60px; font-family: Golos Text, sans-serif; font-weight: 400; font-size: 24px; color: black; letter-spacing: -0.72px; margin-right: 19px;" data-name="Header text" data-node-id="365:117">
-      <p style="margin: 0;" data-node-id="365:113">Features</p>
-      <p style="margin: 0;" data-node-id="365:115">Support</p>
-      <p style="margin: 0;" data-node-id="365:116">About Us</p>
-      <p style="margin: 0;" data-node-id="365:114">Pricing</p>
-    </div>
-  </div>
-  <!-- Main Content Container -->
-  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 206px; min-height: calc(100vh - 206px); padding: 100px 0;" data-name="landing page" data-node-id="6:84">
-    <!-- Hero Section -->
-    <div style="display: flex; flex-direction: column; gap: 57px; align-items: center; width: 1277px; max-width: 90vw;" data-name="Hero Section" data-node-id="367:157">
-      <!-- Hero Text -->
-      <div style="display: flex; flex-direction: column; align-items: center; width: 100%; color: black;" data-name="Hero Text" data-node-id="365:119">
-        <p style="margin: 0; font-family: Golos Text, sans-serif; font-weight: 600; font-size: 96px; text-align: center; letter-spacing: -2.88px; line-height: 1.15;" data-node-id="6:129">
-          Study better <span style="color: #dea54b;">together.</span>
-        </p>
-        <p style="margin: 20px 0 0 0; font-family: Golos Text, sans-serif; font-weight: 400; font-size: 48px; text-align: center; letter-spacing: -1.44px; line-height: 1.2;" data-node-id="6:130">
+    <nav class="site-nav" aria-label="Primary" data-name="Header text" data-node-id="365:117">
+      <a class="nav-link" href="#" data-node-id="365:113">Features</a>
+      <a class="nav-link" href="#" data-node-id="365:115">Support</a>
+      <a class="nav-link" href="#" data-node-id="365:116">About Us</a>
+      <a class="nav-link" href="#" data-node-id="365:114">Pricing</a>
+    </nav>
+  </header>
+  <main class="page-main" data-name="landing page" data-node-id="6:84">
+    <section class="hero" data-name="Hero Section" data-node-id="367:157">
+      <div class="hero-text" data-name="Hero Text" data-node-id="365:119">
+        <h1 data-node-id="6:129">
+          Study better <span class="accent">together.</span>
+        </h1>
+        <p class="hero-subtitle" data-node-id="6:130">
           Join others in study sessions, compete, and learn together.
         </p>
       </div>
-      <!-- Action Buttons -->
-      <div style="display: flex; flex-direction: column; align-items: center; gap: 9px;" data-name="Action Buttons" data-node-id="367:156">
-        <div style="display: flex; gap: 57px; align-items: center; justify-content: center;">
-          <button style="background-color: #dea54b; color: white; border: none; width: 290px; height: 71px; border-radius: 10px; font-family: Golos Text, sans-serif; font-weight: 600; font-size: 32px; letter-spacing: -0.96px; cursor: pointer; transition: background-color 0.2s; padding: 0; margin: 0;" onmouseover="this.style.backgroundColor='#d99437'" onmouseout="this.style.backgroundColor='#dea54b'" data-name="Sign Up Button" data-node-id="6:566">
+      <div class="hero-actions" data-name="Action Buttons" data-node-id="367:156">
+        <div class="button-row">
+          <button class="btn btn-primary" type="button" data-name="Sign Up Button" data-node-id="6:566">
             Sign Up
           </button>
-          <button style="background-color: black; color: white; border: none; width: 290px; height: 71px; border-radius: 10px; font-family: Golos Text, sans-serif; font-weight: 600; font-size: 32px; letter-spacing: -0.96px; cursor: pointer; transition: background-color 0.2s; padding: 0; margin: 0;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='black'" data-name="Join Button" data-node-id="6:571">
+          <button class="btn btn-secondary" type="button" data-name="Join Button" data-node-id="6:571">
             Join
           </button>
         </div>
-        <p style="margin: 0; font-family: Golos Text, sans-serif; font-weight: 400; font-size: 20px; color: black; letter-spacing: -0.6px;" data-node-id="6:574">
-          Got a code?
-        </p>
+        <p class="hero-hint" data-node-id="6:574">Got a code?</p>
       </div>
+    </section>
+  </main>
+  <footer class="site-footer" data-name="Footer" data-node-id="6:579">
+    <div class="footer-icon" data-name="Footer Icon" data-node-id="6:576">
+      <img alt="footer icon" src="../resources/footer-icon.svg" />
     </div>
-  </div>
-  <!-- Footer -->
-  <div style="background-color: rgba(222, 165, 75, 0.21); height: 198px; width: 100%; padding: 45px 33px; box-sizing: border-box;" data-name="Footer" data-node-id="6:579">
-    <div style="width: 108px; height: 108px;" data-name="Footer Icon" data-node-id="6:576">
-      <img alt="footer icon" style="width: 100%; height: 100%; display: block;" src="resources/footer-icon.svg" />
-    </div>
-  </div>
+  </footer>
 </body>
 </html>
