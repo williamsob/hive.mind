@@ -35,35 +35,36 @@
         <label id="task_description">Task Description</label>
         <div class="wrapper">
             <div class="main">
-                <table>
+                <table id="table">
                     <tr>
-                        <td>Task 1</td>
-                        <td>Lorem Ipsum Dolor Sit Amet</td>
+                        <td contenteditable="true">New Task</td>
+                        <td contenteditable="true">Enter task description here</td>
                     </tr>
                     <tr>
-                        <td>Task 2</td>
-                        <td>Lorem Ipsum Dolor Sit Amet</td>
+                        <td contenteditable="true">New Task</td>
+                        <td contenteditable="true">Enter task description here</td>
                     </tr>
                     <tr>
-                        <td>Task 3</td>
-                        <td>Lorem Ipsum Dolor Sit Amet</td>
+                        <td contenteditable="true">New Task</td>
+                        <td contenteditable="true">Enter task description here</td>
                     </tr>
                     <tr>
-                        <td>Task 4</td>
-                        <td>Lorem Ipsum Dolor Sit Amet</td>
+                        <td contenteditable="true">New Task</td>
+                        <td contenteditable="true">Enter task description here</td>
                     </tr>
                     <tr>
-                        <td>Task 5</td>
-                        <td>Lorem Ipsum Dolor Sit Amet</td>
+                        <td contenteditable="true">New Task</td>
+                        <td contenteditable="true">Enter task description here</td>
                     </tr>
                 </table>
             </div>
             <div class button="container">    
-                <button id="deletetask">Delete Task</button>
+                <button id="deletetask" onclick="removeLastRow()">Delete Task</button>
                 <br>
                 <br>
-                <button id="createtask">Create New Task</button>
+                <button id="createtask" onclick="addRow()">Create New Task</button>
             </div>
-        </div>            
+        </div>
+        <script src="to do list.js"></script>            
     </body>
 </html>
