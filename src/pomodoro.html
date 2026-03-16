@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="pomodoroJS.js" defer></script>
   <style>
     :root {
       --ink: #111111;
@@ -160,6 +161,19 @@
       cursor: pointer;
     }
 
+    .end-btn {
+      background: red;
+      color: #ffffff;
+      border: none;
+      border-radius: clamp(16px, 2vw, 20px);
+      padding: clamp(10px, 1.4vw, 19px) clamp(44px, 6vw, 87px) ;
+      font-size: clamp(22px, 3.2vw, 48px);
+      letter-spacing: -0.03em;
+      font-weight: 400;
+      cursor: pointer;
+
+    }
+
     @media (max-width: 600px) {
       .content { gap: 16px; }
       .label.top { padding-left: 0; }
@@ -190,11 +204,14 @@
           <div class="pill b">B</div>
           <div class="pill f">F</div>
         </div>
-        <div class="time" aria-label="Timer">30:00</div>
+        <div class="time" id="timer" aria-label="Timer">30:00</div>
       </div>
 
       <div class="bottom-row">
-        <button class="start-btn" type="button">Start</button>
+        <div>
+          <button class="start-btn" id="start-btn" type="button">Start</button>
+          <button class="start-btn" id="clear-btn" type="button">Clear</button>
+        </div>
         <p class="label bottom">Type of study session</p>
       </div>
     </section>
