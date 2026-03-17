@@ -4,13 +4,14 @@ body {
   font-family: 'Golos Text', sans-serif;
   font-size: 14px;
   margin: 0;
+  overflow-y: hidden;
 }
 
 .top-bar {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 20px 0px 0 20px;
+  padding: 20px 20px 0 20px;
 }
 
 .logo {
@@ -29,17 +30,18 @@ body {
   font-weight: 500;
   margin-top: 40px;
   margin-bottom: 16px;
+  margin-left: 20px;
   display: inline-block;
-  margin-left: 50px;
   border-bottom: 3px solid black;
   padding-bottom: 1px;
 }
 
 .container {
-  margin-left: 50px;
-  margin-top: 10px;
-  width: 1300px;
-  height: 600px;
+  margin: 10px 20px;
+  max-width: 1300px;
+  width: 100%;
+  height: auto;
+  min-height: 600px;
   border: 1px solid #000;
   padding: 24px;
   box-sizing: border-box;
@@ -50,7 +52,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
 }
 
 .input-with-icon {
@@ -77,11 +80,12 @@ body {
 .members-row {
   display: flex;
   gap: 16px;
-  margin-left: 46px;
+  flex-wrap: wrap;
 }
 
 .members-row input {
   flex: 1;
+  min-width: 200px;
   padding: 10px;
   border: 1px solid #000;
   border-radius: 4px;
@@ -90,7 +94,7 @@ body {
 }
 
 .date-input {
-  margin-left: 46px;
+  width: 100%;
 }
 
 .date-input input {
@@ -103,14 +107,15 @@ body {
 }
 
 .repeat-row {
-  margin-left: 46px;
+  width: 100%;
 }
 
 .repeat-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 30%;
+  width: 100%;
+  max-width: 200px;
   padding: 8px;
   border: 1px solid #000;
   border-radius: 4px;
@@ -130,16 +135,16 @@ body {
 }
 
 .lobby-title {
-  margin-left: 46px;
   margin-top: 40px;
   font-size: 14px;
   font-weight: 400;
 }
 
 .container2 {
-  margin-left: 46px;
-  width: 800px;
-  height: 270px;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  min-height: 270px;
   border: 1px solid #000;
   padding: 20px;
   border-radius: 5px;
@@ -225,7 +230,7 @@ body {
 .site-footer {
   margin-top: 80px;
   background: #f8ecd9;
-  padding: 40px 40px;
+  padding: 40px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -242,4 +247,165 @@ body {
   gap: 12px;
   text-align: right;
   font-size: 18px;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .top-bar {
+    gap: 12px;
+    padding: 20px 16px 0 16px;
+  }
+
+  .page-title {
+    font-size: 40px;
+  }
+
+  .section-title {
+    font-size: 26px;
+    margin-left: 16px;
+  }
+
+  .container {
+    margin: 10px 16px;
+    padding: 20px;
+  }
+
+  .meeting-form {
+    max-width: 100%;
+  }
+
+  .members-row {
+    gap: 12px;
+  }
+
+  .repeat-box {
+    max-width: unset;
+    width: auto;
+    padding: 6px;
+    font-size: 14px;
+  }
+
+  .container2 {
+    max-width: unset;
+    width: clamp(575px, 80%, 900px);
+    padding: 16px;
+  }
+
+  .action-area {
+    right: 20px;
+    bottom: 20px;
+    gap: 12px;
+  }
+
+  .create-btn {
+    padding: 12px 32px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .page-title {
+    font-size: 36px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    margin-left: 20px;
+  }
+
+  .container {
+    margin: 10px;
+    padding: 16px;
+  }
+
+  .meeting-form {
+    max-width: 100%;
+  }
+
+  .members-row {
+    flex-direction: column;
+  }
+
+  .members-row input {
+    min-width: unset;
+  }
+
+  .repeat-box {
+    max-width: 100%;
+  }
+
+  .container2 {
+    max-width: 100%;
+  }
+
+  .action-area {
+    position: static;
+    margin-top: 20px;
+    align-items: stretch;
+  }
+
+  .create-btn {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-links {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 28px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .container {
+    padding: 12px;
+    width: 80vw;
+  }
+
+  .meeting-form {
+    gap: 12px;
+  }
+
+  .input-with-icon input,
+  .members-row input,
+  .date-input input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .create-btn {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .footer-logo {
+    width: 80px;
+  }
+
+  .footer-links {
+    font-size: 16px;
+  }
 }
