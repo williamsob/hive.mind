@@ -1,0 +1,9 @@
+{
+    "taskDescription" : {
+    "MaxLength" : 50
+    },
+
+    "taskName" : {
+        "MaxLength": 20
+    }
+}
