@@ -24,12 +24,12 @@ function login(event) {
     let accountNotFoundAlert = alert("Account not found");
     
     if (typeof userProfiles[username] == typeof undefined){
-        return accountNotFoundAlert, console.log(formInputs);
+        return accountNotFoundAlert;
     }
     
     let email = form["email"].value;
     if (userProfiles[username]["email"] != email){
-        
+
         return accountNotFoundAlert;
     }
 

@@ -4,7 +4,7 @@ body {
   font-family: 'Golos Text', sans-serif;
   font-size: 14px;
   margin: 0;
-  overflow-y: hidden;
+  
 }
 
 .top-bar {
@@ -48,12 +48,13 @@ body {
   position: relative;
 }
 
-.meeting-form {
+.meeting-form-input {
   display: flex;
   flex-direction: column;
   gap: 16px;
   width: 100%;
   max-width: 500px;
+  background-color: #fff;
 }
 
 .input-with-icon {
@@ -285,7 +286,7 @@ body {
     padding: 20px;
   }
 
-  .meeting-form {
+  .meeting-form-input {
     max-width: 100%;
   }
 
@@ -320,35 +321,43 @@ body {
 
 @media (max-width: 768px) {
   .top-bar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
+    flex-direction: row; /* used to be column */
+    align-items: center; /* used to be flex-start */
+    padding-left: 20px;
+    padding-bottom: 20px;
   }
 
   .page-title {
-    font-size: 36px;
+    font-size: 24px; /* used to be 36px i think */
   }
 
   .section-title {
-    font-size: 24px;
+    font-size: 20px; /* used to be 24px*/
     margin-left: 20px;
+    padding: 5px 5px 5px 5px;
+    margin-top: 5px;
   }
 
   .container {
     margin: 10px;
     padding: 16px;
+    width: 98%;
   }
 
-  .meeting-form {
-    max-width: 100%;
+  .meeting-form input,
+  .meeting-form select,
+  .meeting-form option,
+  .repeat-box {
+    font-size: 14px;
+    
+  }
+
+  .meeting-form-input {
+    max-width: 98%;
   }
 
   .members-row {
     flex-direction: column;
-  }
-
-  .members-row input{
-    min-width: unset;
   }
 
   .repeat-box {
@@ -356,7 +365,7 @@ body {
   }
 
   .container2 {
-    max-width: 100%;
+    max-width: 98%;
   }
 
   .action-area {
@@ -381,6 +390,37 @@ body {
   }
 }
 
+@media (max-height: 730px) and (max-width: 768px){
+  
+  .container {
+    height: auto;
+    min-height: unset;
+    padding: 30px 10px 30px 10px;
+  }
+
+  .container2, .lobby-title {
+    display: none;
+  }
+
+  .action-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #save-as-draft-btn {
+    width: fit-content;
+  }
+
+  .create-btn {
+    margin-top: 20px;
+  }
+
+  .site-footer {
+    margin-top: 30px
+  }
+}
+
 @media (max-width: 480px) {
   .page-title {
     font-size: 28px;
@@ -400,7 +440,7 @@ body {
     width: 80vw;
   }
 
-  .meeting-form {
+  .meeting-form-input {
     gap: 12px;
   }
 
