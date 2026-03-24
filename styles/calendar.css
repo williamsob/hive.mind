@@ -1,0 +1,92 @@
+body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 { margin-bottom: 10px; }
+
+    .top-bar {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .top-bar button {
+        padding: 10px 15px;
+        border: none;
+        background: #ddd;
+        cursor: pointer;
+        border-radius: 6px;
+    }
+
+    #search {
+        width: 300px;
+        padding: 8px;
+        margin-bottom: 15px;
+    }
+
+    .calendar {
+        display: grid;
+        grid-template-columns: 80px repeat(5, 1fr);
+        border: 1px solid #ccc;
+        background: white;
+    }
+
+    .cell, .time {
+        border: 1px solid #ddd;
+        height: 50px;
+        position: relative;
+    }
+
+    .time {
+        background: #fafafa;
+        text-align: center;
+        font-size: 12px;
+        padding-top: 15px;
+    }
+
+    .day-header {
+        background: #eaeaea;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+        border: 1px solid #ccc;
+    }
+
+    .meeting {
+        position: absolute;
+        left: 5%;
+        width: 90%;
+        border-radius: 6px;
+        padding: 5px;
+        color: white;
+        font-size: 12px;
+    }
+
+    .group1 { background: #4CAF50; }
+    .group2 { background: #E53935; }
+
+    .availability-block {
+        background: rgba(0,0,0,0.15);
+        position: absolute;
+        inset: 0;
+    }
+
+    #actions {
+        margin-top: 15px;
+        display: flex;
+        gap: 10px;
+    }
+
+    #actions button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    #changeAvail { background: #d9534f; color: white; }
+    #suggestMeeting { background: #0275d8; color: white; }
+

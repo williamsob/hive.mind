@@ -5,7 +5,7 @@ const chooseGroup = document.getElementById('choose-group-dropdown');
 const placeholder = document.getElementById('placeholder-option');
 const placeholder2 = document.getElementById('placeholder-option-2');
 
-console.log('This is group mapping:', idToGroupIdMap);
+console.log('This is the group mapping:', idToGroupIdMap);
 meetingForm.addEventListener('submit', (event) => {
     event.preventDefault(event);
 
