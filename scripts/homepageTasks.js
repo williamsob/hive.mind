@@ -1,16 +1,104 @@
 import tasks from "../data/tasks.json" with { type: "json" };
 import Btn from "../data/taskBtn.js";
 
-function createTasks(){
-    let taskContainer = document.getElementById("task-container-with-scroll");
-    let currentUserTasks = tasks[sessionStorage.getItem("id")];
-    let taskBtn = Btn;
+const defaultUserId = "1";
 
-    currentUserTasks.forEach( element => {
-        
+function getCurrentUserId() {
+    return sessionStorage.getItem("id") || defaultUserId;
+}
+
+function getStorageKey() {
+    return `hiveMind.tasks.${getCurrentUserId()}`;
+}
+
+function normalizeTask(task = {}, fallbackId = 1) {
+    return {
+        taskId: task.taskId ?? fallbackId,
+        taskName: task.taskName || `Task ${fallbackId}`,
+        taskDescription: task.taskDescription || "No details added yet.",
+        taskDueDate: task.taskDueDate || "No due date",
+        taskCompletionStatus: Boolean(task.taskCompletionStatus)
+    };
+}
+
+function formatDueDate(dateString) {
+    const parsedDate = new Date(dateString);
+
+    if (Number.isNaN(parsedDate.getTime())) {
+        return dateString || "No due date";
+    }
+
+    return parsedDate.toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric"
+    });
+}
+
+function mergeWithStarterTasks(savedTasks = []) {
+    const starterTasks = (tasks[getCurrentUserId()] || tasks[defaultUserId] || [])
+        .map((task, index) => normalizeTask(task, index + 1));
+    const taskMap = new Map(starterTasks.map((task) => [String(task.taskId), task]));
+
+    savedTasks.forEach((task, index) => {
+        const normalizedTask = normalizeTask(task, index + 1);
+        const taskKey = String(normalizedTask.taskId);
+        taskMap.set(taskKey, { ...taskMap.get(taskKey), ...normalizedTask });
+    });
+
+    return Array.from(taskMap.values());
+}
+
+function loadCurrentUserTasks() {
+    let parsedTasks = [];
+    const savedTasks = localStorage.getItem(getStorageKey());
+
+    if (savedTasks) {
+        try {
+            const storedTasks = JSON.parse(savedTasks);
+
+            if (Array.isArray(storedTasks)) {
+                parsedTasks = storedTasks;
+            }
+        } catch (error) {
+            console.warn("Unable to read saved homepage tasks:", error);
+        }
+    }
+
+    const mergedTasks = mergeWithStarterTasks(parsedTasks);
+    localStorage.setItem(getStorageKey(), JSON.stringify(mergedTasks));
+    return mergedTasks;
+}
+
+function createTasks() {
+    const taskContainer = document.getElementById("task-container-with-scroll");
+    const taskBtn = Btn;
+
+    if (!taskContainer) {
+        return;
+    }
+
+    taskContainer.innerHTML = "";
+
+    const currentUserTasks = loadCurrentUserTasks().sort((taskA, taskB) => {
+        const completionDifference = Number(Boolean(taskA.taskCompletionStatus)) - Number(Boolean(taskB.taskCompletionStatus));
+
+        if (completionDifference !== 0) {
+            return completionDifference;
+        }
+
+        return (Number(taskA.taskId) || 0) - (Number(taskB.taskId) || 0);
+    });
+
+    if (!currentUserTasks.length) {
+        taskContainer.innerHTML = '<p class="text-center text-gray-700 py-4">No tasks available yet.</p>';
+        return;
+    }
+
+    currentUserTasks.forEach((element) => {
         const taskBorder = document.createElement("div");
         taskBorder.className = "home-task-border";
-        
+
         const task = document.createElement("div");
         task.className = "home-task";
 
@@ -19,26 +107,28 @@ function createTasks(){
 
         const taskName = document.createElement("label");
         taskName.className = "home-task-label";
-        taskName.innerText = element["taskName"];
-        
+        taskName.innerText = element.taskName;
+
         const taskDueDate = document.createElement("label");
         taskDueDate.className = "home-task-label";
-        taskDueDate.innerText = element["taskDueDate"];
+        taskDueDate.innerText = `Due Date: ${formatDueDate(element.taskDueDate)}`;
 
         const taskBtnContainer = document.createElement("div");
         taskBtnContainer.className = "home-task-btn";
         taskBtnContainer.innerHTML = taskBtn;
-        
+        taskBtnContainer.style.opacity = element.taskCompletionStatus ? "0.55" : "1";
+
         labelContainer.appendChild(taskName);
         labelContainer.appendChild(taskDueDate);
         task.appendChild(labelContainer);
         task.appendChild(taskBtnContainer);
         taskBorder.appendChild(task);
-        taskContainer.appendChild(taskBorder)
-    }) 
-};
+        taskContainer.appendChild(taskBorder);
+    });
+}
 
 createTasks();
+window.addEventListener("storage", createTasks);
 
 // <div id="task-container-with-scroll" class="flex flex-col items-center py-2 w-full space-y-2 overflow-y-scroll ">
 

@@ -1,6 +1,15 @@
 import groups from "../data/studyGroups.json" with { type : "json" };
 import userProfiles from "../data/userProfiles.json" with { type : "json"};
 
+function getProfileColour(seedText) {
+    return `hsl(${Math.floor(Math.random() * 360)}, 65%, 70%)`;
+
+}
+
+function getInitials(firstName, lastName) {
+    return `${firstName?.[0] || ""}${lastName?.[0] || ""}`.toUpperCase() || "?";
+}
+
 function createStudyGroup() {
     const studyGroupContainer = document.getElementById("study-group-container");
     const groupsJoined = sessionStorage.getItem("groupsJoined").split(",");
@@ -44,7 +53,9 @@ function createStudyGroup() {
         teammateProfileContainer.className = "tm-profile-container";
 
         const teammatePfpContainer = document.createElement("div");
-        teammatePfpContainer.className = "tm-pfp-container";
+        teammatePfpContainer.className = "tm-pfp-container text-white font-semibold";
+        teammatePfpContainer.innerText = getInitials(profile.firstName, profile.lastName);
+        teammatePfpContainer.style.backgroundColor = getProfileColour(profile.username || profile.firstName);
 
         const labelContainer = document.createElement("div");
         labelContainer.className = "tm-label-container";
