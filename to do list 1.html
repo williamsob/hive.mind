@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="website 1.css">
+    </head>
+    <body>
+        <div class="header">
+            <div id="navbar">
+                <ul>
+                    <svg width="100" height="100" viewBox="0 0 131 131" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_120_116)">
+                    <path d="M65.5 93.1266C54.1377 93.1269 43.569 98.9594 37.5056 108.57L29.9803 120.498L32.8715 122.325C33.7757 122.846 34.6944 123.344 35.6251 123.822L43.0453 112.067C47.9083 104.357 56.386 99.6812 65.5 99.6808C74.6143 99.6808 83.0913 104.357 87.9547 112.067L95.3716 123.822C96.3024 123.344 97.221 122.846 98.1252 122.325L101.02 120.498L93.4944 108.57C87.4307 98.959 76.8626 93.1266 65.5 93.1266ZM65.9028 119.35L65.5 119.334C63.4875 119.335 61.6483 120.435 60.6897 122.181L60.5109 122.539L56.8838 130.456C59.1668 130.756 61.4862 130.941 63.837 131L65.5 127.369L67.1598 131C69.5116 130.941 71.8322 130.756 74.1162 130.456L70.4924 122.539L70.3133 122.181C69.4189 120.551 67.7565 119.486 65.9028 119.35ZM68.775 40.6306V0H62.225V40.6306L51.7093 1.38507L45.383 3.08042L55.8957 42.3228L35.5868 7.13966L29.9132 10.4152L50.2221 45.5952L21.5018 16.8703L16.8675 21.5053L45.5877 50.2303L10.4135 29.9181L7.13848 35.5927L42.3159 55.9049L3.07991 45.3905L1.38484 51.7178L40.6274 62.2352H0V68.7865H40.6274L1.38484 79.3038L3.07991 85.6311L42.3159 75.1134L7.13848 95.4289L10.4135 101.104L45.5877 80.788L16.8675 109.516L21.5018 114.151L42.9732 92.6707C44.8151 90.8279 45.85 88.3287 45.85 85.7231V66.9246C45.85 56.0709 54.6483 47.272 65.5 47.2714C76.3524 47.2714 85.15 56.0706 85.15 66.9246V85.7261C85.15 88.332 86.1849 90.8311 88.0271 92.674L109.498 114.151L114.132 109.516L85.4123 80.7913L120.586 101.104L123.861 95.4289L88.6841 75.1134L127.92 85.6311L129.615 79.3038L90.3759 68.7865H131V62.2352H90.3726L129.615 51.7178L127.92 45.3905L88.6841 55.9016L123.861 35.5927L120.586 29.9181L85.4058 50.2303L114.132 21.5021L109.501 16.8703L80.7749 45.5985L101.087 10.4152L95.4132 7.13966L75.101 42.3228L85.617 3.08042L79.2907 1.38507L68.775 40.6306ZM65.5 106.232C58.99 106.232 52.9869 109.749 49.8029 115.428L43.2369 127.136C45.3283 127.892 47.4685 128.544 49.6526 129.087L55.5152 118.634C57.5398 115.021 61.3594 112.783 65.5 112.783C69.6412 112.783 73.4599 115.021 75.4848 118.634L81.3441 129.087C83.5282 128.544 85.6684 127.892 87.7598 127.136L81.1971 115.428C78.0131 109.749 72.0104 106.232 65.5 106.232Z" fill="#DEA54B"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_120_116">
+                    <rect width="131" height="131" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+
+                    <li class="search-container">
+                        <form action="action_page.php">
+                            <input type="text" 
+                            placeholder="Search for friends by email or username..."
+                            name="search">
+                        </form>
+                    </li>
+                    <li><a href="">Group Calendar</a></li>
+                    <li><a href="">Pomodoro Timer</a></li>
+                    <li><a href="">Study Group Chat</a></li>
+                </ul>
+            </div>
+        </div>
+        <label id="tasks">Tasks</label>
+        <label id="task_description">Task Description</label>
+        <div class="wrapper">
+            <div class="main">
+                <table id="table">
+                    <tr>
+                        <td contenteditable="true">New Task</td>
+                        <td contenteditable="true">Enter task description here</td>
+                    </tr>
+                    <tr>
+                        <td contenteditable="true">New Task</td>
+                        <td contenteditable="true">Enter task description here</td>
+                    </tr>
+                    <tr>
+                        <td contenteditable="true">New Task</td>
+                        <td contenteditable="true">Enter task description here</td>
+                    </tr>
+                    <tr>
+                        <td contenteditable="true">New Task</td>
+                        <td contenteditable="true">Enter task description here</td>
+                    </tr>
+                    <tr>
+                        <td contenteditable="true">New Task</td>
+                        <td contenteditable="true">Enter task description here</td>
+                    </tr>
+                </table>
+            </div>
+            <div class button="container">    
+                <button id="deletetask" onclick="removeLastRow()">Delete Task</button>
+                <br>
+                <br>
+                <button id="createtask" onclick="addRow()">Create New Task</button>
+            </div>
+        </div>
+        <script src="to do list.js"></script>            
+    </body>
+</html>
