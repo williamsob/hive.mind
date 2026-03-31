@@ -33,10 +33,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 35px 33px;
+  padding: 24px 33px;
   width: 100%;
   gap: 24px;
   flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(8px);
 }
 
 .logo-lockup {
@@ -90,7 +93,7 @@ body {
   flex: 1;
   align-items: center;
   justify-content: center;
-  padding: 100px 0;
+  padding: clamp(56px, 8vh, 100px) 24px;
 }
 
 .hero {
@@ -189,10 +192,13 @@ button {
 }
 
 .site-footer {
-  background-color: var(--color-footer);
-  height: 198px;
+  background-color: rgba(222, 165, 75, 0.24);
+  min-height: 120px;
   width: 100%;
-  padding: 45px 33px;
+  padding: 24px 33px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .footer-icon {

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hive.Mind</title>
         <link href="../styles/output.css" rel="stylesheet">
+        <script src="../scripts/bindLoginAndSignupBtns.js" defer></script>
     </head>
 
    <body class="bg-primary-radial flex flex-row">
@@ -48,18 +49,22 @@
                         <input type="text" placeholder="Password" class="form-input-basic" required autocomplete="new-password">
                         <input type="text" placeholder="Confirm Password" class="form-input-basic" required autocomplete="new-password">
                         <button type="submit" class="mt-3 mb-5 form-submit-btn w-4/5 h-10 ">Submit</button>
+                    </form>
                 </div>
             </div>
 
             <div class="w-full h-[70px] flex flex-row">
-            
-                    <a href="#index.html" class="bg-black border-[0.5px] border-white text-white font-normal text-xl h-fit w-auto px-5 py-2 rounded-4xl ml-2 flex-row flex-center">
+        
+                <button type="button" class="bg-black border-[0.5px] border-white
+                     text-white font-normal text-xl h-fit w-auto px-5 
+                     py-2 rounded-4xl ml-2 flex-row flex-center" 
+                     id="back_btn">
                     <svg class="smr-2" width="25" height="25" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21.875 26.25L13.125 17.5L21.875 8.75" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
 
                     Back
-                    </a>
+                </button>
             
             </div>
         </div>

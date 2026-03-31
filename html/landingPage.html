@@ -4,8 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>hive.mind - Study Better Together</title>
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="../styles/williams.css">
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600&display=swap" rel="stylesheet">
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const signUpBtn = document.getElementById("sign_up_btn");
+      const loginBtn = document.getElementById("login_btn");
+
+      signUpBtn.addEventListener("click", () => {
+        window.location.href = "./signup.html";
+      });
+
+      loginBtn.addEventListener("click", () => {
+        window.location.href = "./login.html";
+      });
+    });
+  </script>
 </head>
 <body class="page">
   <header class="site-header" data-name="Header" data-node-id="365:118">
@@ -34,11 +48,11 @@
       </div>
       <div class="hero-actions" data-name="Action Buttons" data-node-id="367:156">
         <div class="button-row">
-          <button class="btn btn-primary" type="button" data-name="Sign Up Button" data-node-id="6:566">
+          <button class="btn btn-primary" type="button" data-name="Sign Up Button" data-node-id="6:566" id="sign_up_btn">
             Sign Up
           </button>
-          <button class="btn btn-secondary" type="button" data-name="Join Button" data-node-id="6:571">
-            Join
+          <button class="btn btn-secondary" type="button" data-name="Join Button" data-node-id="6:571" id="login_btn">
+            Login
           </button>
         </div>
         <p class="hero-hint" data-node-id="6:574">Got a code?</p>

@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pomodoro</title>
+  <link rel="stylesheet" href="../styles/williams.css">
+  <link rel="stylesheet" href="../styles/pomodoro.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="../scripts/pomodoroJS.js" defer></script>
+</head>
+<body>
+  <main class="pomodoro-page">
+    <section class="content">
+      <div class="top-row">
+        <a class="logo-link" href="./homepage.html" aria-label="Go to homepage">
+          <div class="logo-tile">
+            <div class="logo-frame">
+              <img src="../resources/logo.svg" alt="hive.mind logo" />
+            </div>
+          </div>
+        </a>
+        <p class="session-title">Group Study Session</p>
+      </div>
+
+      <input class="label label-input top" type="text" placeholder="Topic of study" aria-label="Topic of study">
+
+      <div class="timer-card" aria-label="Timer card">
+        <div class="pill-row" aria-label="Session types">
+          <div class="pill a">A</div>
+          <div class="pill b">B</div>
+          <div class="pill f">F</div>
+        </div>
+        <div class="time" id="timer" aria-label="Timer">30:00</div>
+      </div>
+
+      <div class="bottom-row">
+        <div class="action-buttons">
+          <button class="start-btn" id="start-btn" type="button">Start</button>
+          <button class="start-btn" id="clear-btn" type="button">Clear</button>
+          <a class="back-home-btn" href="./homepage.html">Back</a>
+        </div>
+        <input class="label label-input bottom" type="text" placeholder="Type of study session" aria-label="Type of study session">
+      </div>
+    </section>
+  </main>
+</body>
+</html>

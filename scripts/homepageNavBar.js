@@ -3,9 +3,9 @@ document.getElementById("study-group-chat-btn").addEventListener("click", functi
 });
 
 document.getElementById("pomodoro-btn").addEventListener("click", function(){
-    window.location.href = "./#pomodoro.html";
+    window.location.href = "./pomodoro.html";
 });
 
 document.getElementById("group-calendar-btn").addEventListener("click", function(){
-    window.location.href = "./#groupCalendar.html";
+    window.location.href = "./groupCalendar.html";
 });
