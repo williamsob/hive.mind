@@ -1,0 +1,130 @@
+{
+    "1": [
+        {
+            "id": 1,
+            "title": "Project Planning Session",
+            "date": "2026-02-15",
+            "time": "14:00",
+            "members": [1, 2, 3],
+            "repeat": false
+        },
+        {
+            "id": 2,
+            "title": "Weekly Standup",
+            "date": "2026-03-10",
+            "time": "10:00",
+            "members": [1, 2, 3],
+            "repeat": true
+        },
+        {
+            "id": 3,
+            "title": "Design Review",
+            "date": "2026-04-05",
+            "time": "15:30",
+            "members": [2, 3],
+            "repeat": false
+        },
+        {
+            "id": 4,
+            "title": "Client Presentation",
+            "date": "2026-05-12",
+            "time": "11:00",
+            "members": [1, 2],
+            "repeat": false
+        },
+        {
+            "id": 5,
+            "title": "Sprint Planning",
+            "date": "2026-06-01",
+            "time": "13:00",
+            "members": [1, 2, 3],
+            "repeat": true
+        }
+    ],
+
+    "2": [
+        {
+            "id": 1,
+            "title": "Study Session - Mathematics",
+            "date": "2026-03-08",
+            "time": "16:00",
+            "members": [2, 3],
+            "repeat": true
+        },
+        {
+            "id": 2,
+            "title": "Assignment Discussion",
+            "date": "2026-03-22",
+            "time": "17:00",
+            "members": [2, 3],
+            "repeat": false
+        },
+        {
+            "id": 3,
+            "title": "Exam Prep",
+            "date": "2026-04-15",
+            "time": "14:00",
+            "members": [3],
+            "repeat": false
+        },
+        {
+            "id": 4,
+            "title": "Project Workshop",
+            "date": "2026-05-03",
+            "time": "12:00",
+            "members": [2, 3],
+            "repeat": false
+        },
+        {
+            "id": 5,
+            "title": "Final Review Session",
+            "date": "2026-06-10",
+            "time": "10:00",
+            "members": [2, 3],
+            "repeat": true
+        }
+    ],
+
+    "3": [
+        {
+            "id": 1,
+            "title": "Hackathon Planning",
+            "date": "2026-02-28",
+            "time": "18:00",
+            "members": [1, 3],
+            "repeat": false
+        },
+        {
+            "id": 2,
+            "title": "Code Review Session",
+            "date": "2026-03-18",
+            "time": "19:00",
+            "members": [1, 3],
+            "repeat": true
+        },
+        {
+            "id": 3,
+            "title": "Development Sprint",
+            "date": "2026-04-25",
+            "time": "15:00",
+            "members": [1, 3],
+            "repeat": false
+        },
+        {
+            "id": 4,
+            "title": "Final Testing & Demo Prep",
+            "date": "2026-05-20",
+            "time": "17:00",
+            "members": [3],
+            "repeat": false
+        },
+        {
+            "id": 5,
+            "title": "Post-Hackathon Retrospective",
+            "date": "2026-06-15",
+            "time": "19:30",
+            "members": [1, 3],
+            "repeat": false
+        }
+    ]
+}

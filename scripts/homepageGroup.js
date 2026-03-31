@@ -8,6 +8,8 @@ function createStudyGroup() {
 
     studyGroupContainer.innerHTML = '';
 
+    const memberMap = new Map();
+
     groupsJoined.forEach(groupId => {
         const group = groups[groupId];
 
@@ -17,7 +19,7 @@ function createStudyGroup() {
         const groupName = group[1];
 
         memberIds.forEach(memberId => {
-            if (memberId === currentUserId){
+            if (memberId === currentUserId) {
                 return;
             }
 
@@ -27,33 +29,42 @@ function createStudyGroup() {
                     memberProfile = userProfiles[username];
                     break;
                 }
-                
             }
             if (!memberProfile) return;
 
-            const teammateProfileContainer = document.createElement("div");
-            teammateProfileContainer.className = "tm-profile-container";
+            if (!memberMap.has(memberId)) {
+                memberMap.set(memberId, { profile: memberProfile, groups: [] });
+            }
+            memberMap.get(memberId).groups.push(groupName);
+        });
+    });
 
-            const teammatePfpContainer = document.createElement("div");
-            teammatePfpContainer.className = "tm-pfp-container";
+    memberMap.forEach(({ profile, groups }) => {
+        const teammateProfileContainer = document.createElement("div");
+        teammateProfileContainer.className = "tm-profile-container";
 
-            const labelContainer = document.createElement("div");
-            labelContainer.className = "tm-label-container";
+        const teammatePfpContainer = document.createElement("div");
+        teammatePfpContainer.className = "tm-pfp-container";
 
-            const nameLabel = document.createElement("label");
-            nameLabel.className = "tm-profile-label";
-            nameLabel.innerText = memberProfile.firstName +" "+ memberProfile.lastName;
+        const labelContainer = document.createElement("div");
+        labelContainer.className = "tm-label-container";
 
+        const nameLabel = document.createElement("label");
+        nameLabel.className = "tm-profile-label";
+        nameLabel.innerText = profile.firstName + " " + profile.lastName;
+
+        labelContainer.appendChild(nameLabel);
+
+        groups.forEach(groupName => {
             const groupLabel = document.createElement("label");
             groupLabel.className = "tm-profile-label font-medium";
             groupLabel.innerText = groupName;
-
-            labelContainer.appendChild(nameLabel);
             labelContainer.appendChild(groupLabel);
-            teammateProfileContainer.appendChild(teammatePfpContainer);
-            teammateProfileContainer.appendChild(labelContainer);
-            studyGroupContainer.appendChild(teammateProfileContainer);
         });
+
+        teammateProfileContainer.appendChild(teammatePfpContainer);
+        teammateProfileContainer.appendChild(labelContainer);
+        studyGroupContainer.appendChild(teammateProfileContainer);
     });
 }
 

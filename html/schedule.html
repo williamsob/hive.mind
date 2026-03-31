@@ -6,17 +6,32 @@
   <link rel="stylesheet" href="../styles/schedule.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Schedule Meeting | Hivemind</title>
+
   <script src="../scripts/returnToLogin.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.29.3/full/pyodide.js" async></script>
+
   <!-- <script src="../scripts/test.js" defer></script> -->
   <script src="../scripts/colourDropdownText.js" defer></script>
   <script src="../scripts/chooseGroup.js" defer type="module"></script>
   <script src="../scripts/addMembers.js" defer type="module"></script>
   <script src="../scripts/submitSchedule.js" defer type="module"></script>
+  
+
+  <!-- brython scripts loaded -->
+  <!-- <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.13.2/brython.min.js">
+  </script>
+
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.13.2/brython_stdlib.js">
+  </script> -->
+
 </head>
 <body>
 
-  <header class="top-bar">
-    <img src="../images/Logo.svg" alt="Hivemind Logo" class="logo">
+  <header class="top-bar" href="./homepage.html">
+    <img src="../images/Logo.svg" alt="Hivemind Logo" class="logo" >
     <h1 class="page-title">hive.mind</h1>
   </header>
 
@@ -27,7 +42,7 @@
       <div id="meeting-form-inputs" class="meeting-form-input">
         <div class="input-with-icon">
           <img src="../images/Pencil.svg" alt="Pencil Icon" class="icon">
-          <input id="meeting-name" type="text" placeholder="Give it a name...">
+          <input id="meeting-name" type="text" placeholder="Give it a name..." required>
         </div>
 
         <div class="members-row">
@@ -36,14 +51,12 @@
           </select>
 
           <select multiple size='1' id="add-members-dropdown" type="text" placeholder="Add members +" form="meeting-form">
-            <option value=""selected disabled id="placeholder-option">Add members +</option>
+            <option value="" selected disabled id="placeholder-option" required>Add members +</option>
           </select>
-
-          
         </div>
 
         <div class="date-input">
-          <input id="meeting-date-input" type="text" placeholder="Thursday, 12th February 2026 - 15:00 PM">
+          <input id="meeting-date-input" type="datetime-local" placeholder="Thursday, 12th February 2026 - 15:00 PM" required>
         </div>
 
         <div class="repeat-row">
