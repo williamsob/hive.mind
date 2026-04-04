@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Study Group Dashboard</title>  
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>">
+</head>
+<body class="bg-gray-100 min-h-screen flex text-sm">
+
+  <!--SIDEBAR-->
+  <aside class="w-46 bg-white border-r border-gray-200 flex flex-col py-5 px-3 shrink-0 min-h-screen">
+
+    <!-- App Name -->
+    <p class="font-bold text-blue-700 px-2 mb-6"><u>Student study groups</u></p> 
+    
+    <!-- User Profile  (TOP) -->
+    <div class="border border-gray-200 rounded-lg px-3 py-2 mb-4">
+      <p class="font-medium text-Black-700"><u>Alan</u></p><br>
+      <p class="text-xs text-black-400">Year: 1 </p><br>
+      <p class="text-xs text-black-400">Course: Computer Science</p>
+    </div>
+
+
+    <!-- Navigation -->
+    <nav class="flex flex-col gap-1 flex-1">
+      <a href="#" class="px-3 py-2 rounded-lg bg-blue-600 text-white">Dashboard</a>
+      <a href="#" class="px-3 py-2 rounded-lg text-gray-500 hover:bg-gray-100">Status</a>
+      <a href="#" class="px-3 py-2 rounded-lg text-gray-500 hover:bg-gray-100">Find Groups</a>
+      <a href="#" class="px-3 py-2 rounded-lg text-gray-500 hover:bg-gray-100">My Groups</a>
+      <a href="#" class="px-3 py-2 rounded-lg text-blue-600 text-white">Previous groups</a>
+      <a href="#" class="px-3 py-2 rounded-lg text-gray-500 hover:bg-gray-100">Schedule</a>
+      <a href="#" class="px-3 py-2 rounded-lg text-gray-500 hover:bg-gray-100">Messages</a>
+      <a href="#" class="px-3 py-2 rounded-lg text-gray-500 hover:bg-gray-100">Settings</a>
+    </nav>
+
+  </aside>
+
+  <!--  MAIN -->
+  <main class="flex-1 p-6 overflow-y-auto">
+
+    <!-- Page Header -->
+    <div class="flex items-center justify-between mb-6">
+      <div>
+        <h1 class="text-base font-bold text-gray-800"> Study groups</h1>
+        <p class="text-xs text-gray-400 mt-0.5">Find your next study group today!!!</p>
+      </div>
+      <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
+        + Create a study Group
+      </button>
+    </div>
+
+    <!--  STAT CARDS  -->
+    <div class="grid grid-cols-4 gap-3 mb-6">
+      <div class="bg-white rounded-lg p-4 border border-gray-200">
+        <p class="text-xs text-gray-400">Active Groups</p>
+        <p class="text-xl font-bold text-blue-600 mt-1">84</p>
+      </div>
+      <div class="bg-white rounded-lg p-4 border border-gray-200">
+        <p class="text-xs text-gray-400">Groups Currently Ongoing</p>
+        <p class="text-xl font-bold text-green-500 mt-1">24</p>
+      </div>
+      <div class="bg-white rounded-lg p-4 border border-gray-200">
+        <p class="text-xs text-gray-400">Recommended Groups</p>
+        <p class="text-xl font-bold text-yellow-600 mt-1">3</p>
+      </div>
+      <div class="bg-white rounded-lg p-4 border border-gray-200">
+        <p class="text-xs text-gray-400">Groups Starting Soon</p>
+        <p class="text-xl font-bold text-blue-600 mt-1">7</p>
+      </div>
+    </div>
+
+    <!--  SEARCH FILTER  -->
+    <div class="flex gap-2 mb-6">
+      <input type="text" placeholder="Search by subject or group name…"
+        class="flex-1 border border-gray-200 bg-white rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"/>
+      <select class="border border-gray-200 bg-white rounded-lg px-3 py-2 text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-300">
+        <option>All Subjects</option>
+        <option>Engineering</option>
+        <option>Computer Science</option>
+        <option>Networking</option>
+        <option>Data Science</option>
+        <option>Cyber Security</option>
+        <option>Graphics Design</option>
+        <option></option>
+      </select>
+      <select class="border border-gray-200 bg-white rounded-lg px-3 py-2 text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-300">
+        <option>Any Status</option>
+        <option>Open</option>
+        <option>Starting Soon</option>
+        <option>Full</option>
+      </select>
+    </div>
+
+    <!--  GROUP CARDS  -->
+    <h2 class="font-semibold text-gray-700 mb-3">Available Groups</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 mb-6">
+
+      <!-- Group Card  (OPEN) -->
+      <div class="bg-white rounded-lg p-4 border border-gray-200 flex flex-col gap-3">
+        <div class="flex justify-between items-start">
+          <div>
+            <p class="font-semibold text-gray-800">Engineering group</p>
+            <p class="text-xs text-gray-400 mt-0.5">Engineering . electrics</p>
+          </div>
+          <span class="text-xs bg-green-100 text-green-600 px-2 py-0.5 rounded-full">Open</span>
+        </div>
+        <div class="flex gap-2 flex-wrap">
+          <span class="text-xs bg-blue-50 text-blue-500 px-2 py-0.5 rounded-full">Online</span>
+          <span class="text-xs bg-blue-50 text-blue-500 px-2 py-0.5 rounded-full">Mon . 14:30 - 16:30 </span>
+        </div>
+        <div class="flex justify-between items-center">
+          <p class="text-xs text-gray-400">4 / 10 members</p>
+          <button class="bg-blue-600 hover:bg-blue-700 text-white text-xs px-3 py-1.5 rounded-lg transition-colors">Join</button>
+        </div>
+      </div>
+
+      <!-- Group Card  (STARTING SOON) -->
+      <div class="bg-white rounded-lg p-4 border border-gray-200 flex flex-col gap-3">
+        <div class="flex justify-between items-start">
+          <div>
+            <p class="font-semibold text-gray-800">Data Science group</p>
+            <p class="text-xs text-gray-400 mt-0.5">Data Science . Data Management</p>
+          </div>
+          <span class="text-xs bg-amber-100 text-amber-600 px-2 py-0.5 rounded-full">Starting Soon</span>
+        </div>
+        <div class="flex gap-2 flex-wrap">
+          <span class="text-xs bg-blue-50 text-blue-500 px-2 py-0.5 rounded-full">In-person</span>
+          <span class="text-xs bg-blue-50 text-blue-500 px-2 py-0.5 rounded-full">Wed . 13:00-15:30</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <p class="text-xs text-gray-400">7 / 9 members</p>
+          <button class="bg-blue-600 hover:bg-blue-700 text-white text-xs px-3 py-1.5 rounded-lg transition-colors">Join</button>
+        </div>
+      </div>
+
+      <!-- Group Card — (FULL) -->
+      <div class="bg-white rounded-lg p-4 border border-gray-200 flex flex-col gap-3">
+        <div class="flex justify-between items-start">
+          <div>
+            <p class="font-semibold text-gray-800">Media studies group</p>
+            <p class="text-xs text-gray-400 mt-0.5"> Media studies . Digital Marketing and Media language</p>
+          </div>
+          <span class="text-xs bg-red-100 text-red-500 px-2 py-0.5 rounded-full">Full</span>
+        </div>
+        <div class="flex gap-2 flex-wrap">
+          <span class="text-xs bg-blue-50 text-blue-500 px-2 py-0.5 rounded-full">Online and in-person available</span>
+          <span class="text-xs bg-blue-50 text-blue-500 px-2 py-0.5 rounded-full">Fri . 14:00-17:30</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <p class="text-xs text-gray-400">15 / 15 members</p>
+          <button disabled class="bg-gray-100 text-gray-400 text-xs px-3 py-1.5 rounded-lg cursor-not-allowed">Full</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!--  MY GROUPS TABLE  -->
+    <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+      <div class="px-4 py-3 border-b border-gray-100 flex items-center justify-between">
+        <p class="font-semibold text-gray-700">My Groups</p>
+        <a href="#" class="text-xs text-blue-500 hover:underline">View all</a>
+      </div>
+      <table class="w-full">
+        <thead class="bg-gray-50 text-xs text-gray-400 uppercase">
+          <tr>
+            <th class="text-left px-4 py-2">Group Name</th>
+            <th class="text-left px-4 py-2">Subject</th>
+            <th class="text-left px-4 py-2">Next Session</th>
+            <th class="text-left px-4 py-2">Members</th>
+            <th class="text-left px-4 py-2">Status</th>
+            <th class="text-left px-4 py-2"></th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100 text-gray-600">
+          <tr class="hover:bg-gray-50">
+            <td class="px-4 py-3 font-medium">Hackerthon Group</td>
+            <td class="px-4 py-3 text-black-400">Computer Science</td>
+            <td class="px-4 py-3 text-black-400">Wed, 13:00-19:45</td>
+            <td class="px-4 py-3 text-black-400">13 / 20</td>
+            <td class="px-4 py-3"><span class="bg-green-100 text-green-600 text-xs px-2 py-0.5 rounded-full">Active</span></td>
+            <td class="px-4 py-3"><a href="#" class="text-blue-500 hover:underline text-xs">Open</a></td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-4 py-3 font-medium">Cyber Security group</td>
+            <td class="px-4 py-3 text-black-400">End point security</td>
+            <td class="px-4 py-3 text-black-400">Mon, 12:30-15:00</td>
+            <td class="px-4 py-3 text-black-400">9 / 10</td>
+            <td class="px-4 py-3"><span class="bg-amber-100 text-amber-600 text-xs px-2 py-0.5 rounded-full">Pending</span></td>
+            <td class="px-4 py-3"><a href="#" class="text-blue-500 hover:underline text-xs">Open</a></td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="px-4 py-3 font-medium">Grapics design group</td>
+            <td class="px-4 py-3 text-black-400">User Experience (UX/UI) Design</td>
+            <td class="px-4 py-3 text-black-400">Mon, 16:00-18:00</td>
+            <td class="px-4 py-3 text-black-400">6 / 6</td>
+            <td class="px-4 py-3"><span class="bg-red-100 text-red-500 text-xs px-2 py-0.5 rounded-full">Full</span></td>
+            <td class="px-4 py-3"><a href="#" class="text-blue-500 hover:underline text-xs">Open</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+</body>
+</html>
+
+
+        
+
+   
