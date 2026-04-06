@@ -10,7 +10,7 @@ const placeholder = document.getElementById('placeholder-option');
 const placeholder2 = document.getElementById('placeholder-option-2');
 let groupMeetings = [];
 
-function initializeStoredMeetings() {
+function initialiseStoredMeetings() {
     const stored = localStorage.getItem('meetings');
     if (!stored) {
         localStorage.setItem('meetings', JSON.stringify(meetings));
@@ -18,7 +18,7 @@ function initializeStoredMeetings() {
     return stored ? JSON.parse(stored) : meetings;
 }
 
-let storedMeetings = initializeStoredMeetings();
+let storedMeetings = initialiseStoredMeetings();
 
 console.log('This is the group mapping:', idToGroupIdMap);
 meetingForm.addEventListener('submit', (event) => {
