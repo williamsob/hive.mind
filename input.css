@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-golos: 'Golos Text', sans-serif;
+    --font-montserrat: 'Montserrat', sans-serif;
+    --color-primary: #DEA54B;
+    --color-secondary: #6E7E85;
+    --color-secondary2: #FFEDCA;
+    --color-accent: #007AFF;
+    --color-background: #000000;
+    --color-background2: #595959;
+    --color-gray-alt1: #D9D9D9;
+    --color-gray-alt2: #767676;
+    --color-pfp-placeholder: var(--color-gray-400);
+}
+
+@utility flex-center {
+
+  @apply flex justify-center items-center;
+
+}
+
+@utility home-task-container {
+  @apply flex flex-col items-center pb-1 justify-self-end bg-gray-alt2 border w-fit min-h-24 h-72 lg:h-auto lg:max-h-96 lg:min-h-56 pl-2 rounded-tl-[25px] rounded-bl-[25px];
+}
+
+@layer base {
+  body, h1, h2, h3, h4, h5, h6, p, span, a, button, input, label, div, section, header, nav {
+    @apply font-golos;
+  }
+
+  button {
+    @apply cursor-pointer text-white px-4 py-2 rounded flex-center;
+  }
+
+  h1 {
+    @apply text-6xl font-semibold;
+  }
+
+  h2 {
+    @apply text-5xl font-semibold;
+  }
+
+  h3 {
+    @apply text-4xl font-semibold;
+  }
+
+  h4 {
+    @apply text-3xl font-semibold;
+  }
+
+  h5 {
+    @apply text-2xl font-semibold;
+  }
+
+  h6 {
+    @apply text-xl font-semibold;
+  }
+
+  body::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  body::-webkit-scrollbar-track {
+    @apply bg-linear-to-t from-accent to-primary;
+  }
+
+  #task-container-with-scroll::-webkit-scrollbar {
+    @apply w-2;
+    
+  }
+
+  #task-container-with-scroll::-webkit-scrollbar-track {
+    @apply border-1 bg-white; 
+    
+  }
+
+  #task-container-with-scroll::-webkit-scrollbar-thumb {
+    @apply bg-secondary rounded-3xl border;
+  }
+
+  #task-container-with-scroll::-webkit-scrollbar-thumb:hover {
+    background: #666;
+  }
+
+  #study-group-container::-webkit-scrollbar {
+    width: 10px;
+    background: #fff;
+    border-left: 1px solid black;
+  }
+
+  #study-group-container::-webkit-scrollbar-thumb{
+    @apply bg-primary border;
+  }
+}
+
+
+@utility bg-primary-radial {
+  @apply bg-radial-[at_100%_100%] lg:bg-radial-[at_50%_100%] from-primary to-white to-60%  ;
+}
+
+@utility bg-primary-radial-nav {
+  @apply bg-radial-[at_50%_100%] from-primary to-gray-100 to-55% ;
+}
+
+@utility form-input-basic {
+  @apply font-golos border-2 border-gray-500 rounded-3xl px-3 focus:outline-none focus:ring-2 focus:ring-blue-500 w-4/5 h-10;
+}
+
+@utility form-submit-btn {
+  @apply text-2xl border-2 border-black bg-accent text-white rounded-3xl transition-all duration-200 hover:bg-blue-800;
+}
+
+@utility form-input-error {
+  @apply border-red-600 bg-red-100/60 focus:ring-red-400;
+}
+
+@utility nav-link-button {
+  @apply bg-radial-[at_100%_100%] from-gray-200 to-white to-75% border-2 border-gray-700 sm:rounded-lg lg:rounded-xl px-2 lg:py-2 sm:font-medium lg:font-normal sm:text-[15px] lg:text-lg sm:py-1 text-center w-full hover:cursor-pointer;
+}
+
+@utility pfp-circle {
+  @apply bg-pfp-placeholder w-20 h-20 lg:w-25 lg:h-25 rounded-full border-2 border-black flex items-center justify-center;
+}
+
+@utility tm-profile-label {
+  @apply w-fit border-1 font-montserrat lg:text-xl px-1 lg:px-1 lg:py-1;
+}
+
+@utility tm-profile-container {
+  @apply flex flex-row items-center sm:border-2 w-fit space-x-5 sm:py-2 sm:px-1 p-0 bg-white overflow-x-hidden text-ellipsis;
+}
+
+@utility tm-pfp-container {
+  @apply pfp-circle w-15 h-15 lg:w-20 lg:h-20;
+}
+
+@utility tm-label-container {
+  @apply flex flex-col space-y-2 w-56 lg:w-72;
+}
+
+@utility card {
+  @apply flex flex-col items-start w-30 h-55 lg:w-60 lg:h-50 text-start text-white text-shadow-xs text-shadow-gray-900 space-y-3 pt-2 px-2 shadow-lg shadow-black/50;
+}
+
+@utility card-title {
+  @apply text-sm lg:text-lg;
+}
+
+@utility card-body {
+  @apply text-[10.9px] lg:text-sm/7;
+}
+
+@utility home-task-border {
+  @apply bg-[#C0C0C0] px-1 py-1 rounded-full border-2 w-auto;
+}
+
+@utility home-task {
+  @apply bg-white flex flex-row items-center rounded-4xl border-2 pl-4 py-1 space-x-10 lg:space-x-50; 
+}
+
+@utility home-task-label-container {
+  @apply flex flex-col text-sm lg:text-base gap-y-1 w-fit;
+}
+
+@utility home-task-label {
+  @apply font-medium text-nowrap w-60 lg:w-100 overflow-x-hidden text-ellipsis;
+}
+
+@utility home-task-btns {
+  @apply h-fit w-10;
+}
+
+@utility home-task-btn-svg {
+  @apply rounded-full w-10 hover:border-4 mr-2 border-green-800 hover:cursor-pointer;
+}

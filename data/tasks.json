@@ -1,0 +1,113 @@
+{
+  "1": [
+    {
+      "taskId": 1,
+      "taskName": "Study for Calculus Exam",
+      "taskDescription": "Review chapters 5-7 with study group",
+      "taskDueDate": "2026-03-15",
+      "taskCompletionStatus": false
+    },
+    {
+      "taskId": 2,
+      "taskName": "Complete Programming Assignment",
+      "taskDescription": "Finish the Java project with teammates",
+      "taskDueDate": "2026-03-12",
+      "taskCompletionStatus": true
+    },
+    {
+      "taskId": 3,
+      "taskName": "Group Chemistry Lab Report",
+      "taskDescription": "Analyze results from this week's experiment",
+      "taskDueDate": "2026-03-18",
+      "taskCompletionStatus": false
+    },
+    {
+      "taskId": 4,
+      "taskName": "Prepare Presentation Slides",
+      "taskDescription": "Create slides for history group project",
+      "taskDueDate": "2026-03-20",
+      "taskCompletionStatus": false
+    },
+    {
+      "taskId": 5,
+      "taskName": "Study Session - Biology",
+      "taskDescription": "Meet friends to review blood circulation systems",
+      "taskDueDate": "2026-03-10",
+      "taskCompletionStatus": true
+    }
+  ],
+  "2": [
+    {
+      "taskId": 6,
+      "taskName": "Statistics Assignment Due",
+      "taskDescription": "Complete worksheet with study partner",
+      "taskDueDate": "2026-03-13",
+      "taskCompletionStatus": false
+    },
+    {
+      "taskId": 7,
+      "taskName": "English Essay Group Review",
+      "taskDescription": "Edit and proofread essays with classmates",
+      "taskDueDate": "2026-03-17",
+      "taskCompletionStatus": false
+    },
+    {
+      "taskId": 8,
+      "taskName": "Physics Problem Set",
+      "taskDescription": "Solve mechanics problems with study group",
+      "taskDueDate": "2026-03-14",
+      "taskCompletionStatus": true
+    },
+    {
+      "taskId": 9,
+      "taskName": "Study for Micro Exam",
+      "taskDescription": "Group study session on concepts 1-4",
+      "taskDueDate": "2026-03-19",
+      "taskCompletionStatus": false
+    },
+    {
+      "taskId": 10,
+      "taskName": "Literature Discussion Group",
+      "taskDescription": "Prepare notes for book club discussion",
+      "taskDueDate": "2026-03-11",
+      "taskCompletionStatus": true
+    }
+  ],
+  "3": [
+    {
+      "taskId": 11,
+      "taskName": "Database Project Checkpoint",
+      "taskDescription": "Complete first phase with development team",
+      "taskDueDate": "2026-03-16",
+      "taskCompletionStatus": false
+    },
+    {
+      "taskId": 12,
+      "taskName": "Math Tutoring Session",
+      "taskDescription": "Help friends with differential equations",
+      "taskDueDate": "2026-03-09",
+      "taskCompletionStatus": true
+    },
+    {
+      "taskId": 13,
+      "taskName": "Research Paper Outline",
+      "taskDescription": "Create outline with research group members",
+      "taskDueDate": "2026-03-21",
+      "taskCompletionStatus": false
+    },
+    {
+      "taskId": 14,
+      "taskName": "Organic Chemistry Problem Session",
+      "taskDescription": "Work through reaction mechanisms with peers",
+      "taskDueDate": "2026-03-12",
+      "taskCompletionStatus": false
+    },
+    {
+      "taskId": 15,
+      "taskName": "Final Project Meeting",
+      "taskDescription": "Coordinate project deliverables with team",
+      "taskDueDate": "2026-03-22",
+      "taskCompletionStatus": false
+    }
+  ]
+}
